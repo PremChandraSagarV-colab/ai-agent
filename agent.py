@@ -1,10 +1,13 @@
 import requests
 import os
+import datetime
 
 TOKEN = os.environ["BOT_TOKEN"]
 CHAT_ID = os.environ["CHAT_ID"]
 
-message = "AI agent started successfully."
+time = datetime.datetime.now().strftime("%H:%M:%S")
+
+message = f"AI cloud agent woke up at {time}"
 
 url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
 
